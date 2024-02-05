@@ -58,14 +58,20 @@
             <div class="form-group">
                 <span class="form-label">Name:</span>
                 <asp:TextBox ID="txtName" runat="server" CssClass="form-control" />
+                <asp:RequiredFieldValidator ID="name" runat="server" ControlToValidate="txtName" ErrorMessage="please enter name"
+                    ForeColor="Red"></asp:RequiredFieldValidator>
             </div>
             <div class="form-group">
                 <span class="form-label">Email:</span>
                 <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" />
+                <asp:RequiredFieldValidator ID="email" runat="server" ControlToValidate="txtEmail" ErrorMessage="please enter email"
+                     ForeColor="Red"></asp:RequiredFieldValidator>
             </div>
             <div class="form-group">
                 <span class="form-label">Password:</span>
                 <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control" />
+                <asp:RequiredFieldValidator ID="pass" runat="server" ControlToValidate="txtPassword" ErrorMessage="please enter password"
+                     ForeColor="Red"></asp:RequiredFieldValidator>
             </div>
             <div class="form-group">
                 <span class="form-label">Country:</span>
@@ -81,6 +87,9 @@
                     <asp:ListItem Text="Canada" Value="Canada" />
                     <asp:ListItem Text="UK" Value="UK" />
                 </asp:DropDownList>
+                <asp:RequiredFieldValidator ID="country" runat="server" ControlToValidate="ddlCountry"
+                    ErrorMessage="please select country"
+                    ForeColor="Red"></asp:RequiredFieldValidator>
             </div>
             <div class="form-group">
                 <span class="form-label">Gender:</span>
@@ -88,6 +97,9 @@
                     <asp:ListItem Text="Male" Value="Male" />
                     <asp:ListItem Text="Female" Value="Female" />
                 </asp:RadioButtonList>
+                <asp:RequiredFieldValidator ID="gender" runat="server" ControlToValidate="rblGender"
+                    ErrorMessage="please select your gender"
+                    ForeColor="Red"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">

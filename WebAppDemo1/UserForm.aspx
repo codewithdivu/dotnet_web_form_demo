@@ -16,12 +16,14 @@
             align-items: center;
             height: 100vh;
         }
+
         .container {
             background-color: #fff;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
+
         input[type="text"],
         input[type="password"],
         input[type="submit"] {
@@ -32,14 +34,17 @@
             border-radius: 5px;
             box-sizing: border-box;
         }
+
         input[type="submit"] {
             background-color: #007bff;
             color: #fff;
             cursor: pointer;
         }
-        input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
+
+            input[type="submit"]:hover {
+                background-color: #0056b3;
+            }
+
         .result {
             margin-top: 10px;
             font-size: 16px;
@@ -52,13 +57,19 @@
         <form id="form1" runat="server">
             <div>
                 <asp:TextBox ID="txtEmail" runat="server" placeholder="Enter Email"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="email" runat="server" ControlToValidate="txtEmail" ErrorMessage="please enter email"
+                    ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
                 <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" placeholder="Enter Password"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="pass" runat="server" ControlToValidate="txtPassword" ErrorMessage="please enter password"
+                    ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
                 <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="BtnSubmit_Click" />
                 <br />
             </div>
             <asp:Label ID="lblResult" CssClass="result" runat="server" Text=""></asp:Label>
+            <asp:validationsummary id="validationsummary1" runat="server" forecolor="red"/>  
+
         </form>
     </div>
 </body>

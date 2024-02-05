@@ -49,6 +49,11 @@
               margin-right:4rem;
               margin-left:4rem;
           }
+          .fontSize{
+              font-size:5rem;
+              margin-right:4rem;
+              margin-left:4rem;
+          }
           .btn{
               width:100%;
               padding: 0.5rem 2rem;
